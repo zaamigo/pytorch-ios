@@ -74,6 +74,8 @@ else
   CMAKE_ARGS+=("-DIOS_PLATFORM=OS")
 fi
 
+CMAKE_ARGS+=("-DCMAKE_OSX_DEPLOYMENT_TARGET=17.2")
+
 if [ -n "${IOS_ARCH:-}" ]; then
   CMAKE_ARGS+=("-DIOS_ARCH=${IOS_ARCH}")
 fi
