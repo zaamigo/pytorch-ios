@@ -1,11 +1,13 @@
 ## Torch IOS Compilation
 0. Add submodules:
+
 First, ensure all submodules are updated and initialized:
 ```
 git submodule update --init --recursive
 ```
 
-1. First compile the library for the use-case you need:
+1. Compile the library for the use-case you need:
+
 Depending on your use case, you need to compile the library for either the simulator or the actual device.
 - Compile for the simulator
 ```
@@ -22,6 +24,8 @@ BUILD_PYTORCH_MOBILE=1 IOS_ARCH=arm64 ./scripts/build_ios.sh
 cd build_ios/install/lib
 libtool -static -o libtorch_sim *.a
 ```
+
+3. Move libtorch_sim file (or all .a files) and 'include/' folder to the desired destination.
 
 ![PyTorch Logo](https://github.com/pytorch/pytorch/blob/main/docs/source/_static/img/pytorch-logo-dark.png)
 
